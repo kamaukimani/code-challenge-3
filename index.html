@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog/Post Manager</title>
+    <script src="./src/index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+     <div id="post-list">
+    <h3>Posts</h3>
+  </div>
+
+  <div id="post-detail">
+    <h3>Post Detail</h3>
+    <p>Select a post to see the details here.</p>
+  </div>
+
+  <form id="new-post-form">
+    <h3>Add New Post</h3>
+    <input type="text" id="title" placeholder="Title" required />
+    <textarea id="content" placeholder="Content" rows="5" required></textarea>
+    <input type="text" id="author" placeholder="Author" required />
+    <input type="url"   id="url"    placeholder="URL"   required />
+    <button type="submit">Add Post</button>
+  </form>
+</body>
+</html>
