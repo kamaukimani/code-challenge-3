@@ -1,0 +1,52 @@
+ body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: aquamarine;
+    }
+    #post-list {
+      flex: 1;
+      max-width: 200px;
+      border-right: 1px solid #ccc;
+      padding-right: 1rem;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+    #post-list div {
+      padding: 0.5rem;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+    }
+    #post-list div:hover {
+      background-color: #f0f0f0;
+    }
+    #post-detail {
+      flex: 3;
+      padding-left: 1rem;
+    }
+    form {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+    form input, form textarea {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.5rem;
+      font-size: 1rem;
+      cursor: pointer;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    form button:hover {
+      background-color: #0056b3;
+    }
