@@ -50,11 +50,32 @@ function handlePostClick(postId) {
         <p>${post.content}</p>
         <small><em>Author: ${post.author}</em></small>
         <img src="${post.imageUrl}" alt="${post.title}" style="max-width: 100%; height: auto;" />
-      `;
+        <div class="delete-btn">
+        <button id="delete">Delete Post</button>
+        </div>
+        `;
+        const deleteBtn = document.getElementById("delete");
+      deleteBtn.addEventListener("click", () => {
+        if (confirm("Are you sure you want to delete this post?")) {
+          deletePost(postId);
+        }
+      });
+
     })
     .catch((error) => console.error("Error fetching post details:", error));
 }
-
+// Delete a post by ID
+function deletePost(postId) {
+  fetch(`${baseURL}/${postId}`, {
+    method: "DELETE",
+  })
+    .then((res) => {
+     
+      displayPosts(); // Refresh list
+      postDetailDiv.innerHTML = ""; // Clear details
+    })
+    .catch((error) => console.error("Error deleting post:", error));
+}
 // this adds  elements from the form 
 function addNewPostListener() {
   newPostForm.addEventListener("submit", (e) => {
